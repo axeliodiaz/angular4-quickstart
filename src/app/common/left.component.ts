@@ -4,9 +4,12 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-left-navigation',
   template: `
     <div class="col-sm-4">
-        Left component
+        <p class="left-paragraph">Left component</p>
     </div>
   `,
+  styleUrls: [
+      './left.component.css'
+  ]
 })
 export class LeftComponent implements OnInit {
   constructor() {}
