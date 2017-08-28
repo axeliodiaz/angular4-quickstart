@@ -4,7 +4,10 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-left-navigation',
   template: `
     <div class="col-sm-4">
-        <p class="left-paragraph">Left component</p>
+        <h2>{{ title }}</h2>
+        <ul>
+            <li *ngFor="let item of items">{{ item }}</li>
+        </ul>
     </div>
   `,
   styleUrls: [
@@ -14,4 +17,6 @@ import { Component, OnInit } from '@angular/core';
 export class LeftComponent implements OnInit {
   constructor() {}
   ngOnInit() {}
+  title:string = "News";
+  items:Array<string> = ["Welcome", "Welcome #2"];
 }
